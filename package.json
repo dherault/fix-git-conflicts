@@ -31,7 +31,8 @@
   "scripts": {
     "test": "jest",
     "dev": "jest --watchAll",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@jest/globals": "^30.0.3",
