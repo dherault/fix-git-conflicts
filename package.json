@@ -6,9 +6,9 @@
   "module": "./dist/fix-git-conflicts.es.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/fix-git-conflicts.es.js",
-      "require": "./dist/fix-git-conflicts.umd.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/fix-git-conflicts.umd.js"
     }
   },
   "types": "./dist/index.d.ts",
