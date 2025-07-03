@@ -1,6 +1,6 @@
 {
   "name": "fix-git-conflicts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "./dist/fix-git-conflicts.umd.js",
   "module": "./dist/fix-git-conflicts.es.js",
