@@ -15,14 +15,14 @@ function fixAllConflicts(code: string, strategy: Strategy): string {
       continue
     }
 
-    if (line.startsWith('>>>>>>>')) {
-      currentConflictStrategy = null
+    if (line.startsWith('=======')) {
+      currentConflictStrategy = 'theirs'
       deletedIndexes.push(i)
       continue
     }
 
-    if (line.startsWith('=======')) {
-      currentConflictStrategy = 'theirs'
+    if (line.startsWith('>>>>>>>')) {
+      currentConflictStrategy = null
       deletedIndexes.push(i)
       continue
     }
