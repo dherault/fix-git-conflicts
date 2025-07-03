@@ -1,0 +1,46 @@
+{
+  "name": "fix-git-conflicts",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/fix-git-conflicts.umd.js",
+  "module": "./dist/fix-git-conflicts.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/fix-git-conflicts.es.js",
+      "require": "./dist/fix-git-conflicts.umd.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dherault/fix-git-conflicts.git"
+  },
+  "keywords": [
+    "git",
+    "conflicts"
+  ],
+  "author": "David Hérault <dherault@gmail.com> (https://github.com/dherault)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dherault/fix-git-conflicts/issues"
+  },
+  "homepage": "https://github.com/dherault/fix-git-conflicts#readme",
+  "scripts": {
+    "test": "jest",
+    "dev": "jest --watchAll",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-dherault-typescript": "^1.4.0",
+    "jest": "^30.0.3",
+    "ts-jest": "^29.4.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
