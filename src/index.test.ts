@@ -84,4 +84,41 @@ Friend.
 `)
   })
 
+  test('should fix conflicts 4', () => {
+    const code = `
+Just saying:
+\<<<<<<< HEAD
+Hello, universe!
+I say that.
+=======
+Hello, Git!
+>>>>>>> feature
+To you.
+\<<<<<<< HEAD
+What's up?
+=======
+I say this.
+How are you doing?
+>>>>>>> feature
+Friend.
+`
+
+    expect(fixAllConflicts(code, 'ours')).toBe(`
+Just saying:
+Hello, universe!
+I say that.
+To you.
+What's up?
+Friend.
+`)
+    expect(fixAllConflicts(code, 'theirs')).toBe(`
+Just saying:
+Hello, Git!
+To you.
+I say this.
+How are you doing?
+Friend.
+`)
+  })
+
 })
